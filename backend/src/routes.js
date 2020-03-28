@@ -10,6 +10,7 @@ const AuthController = require('./controllers/AuthController')
 
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create);
+routes.delete('/ongs/:id', OngController.delete);
 
 routes.get('/incidents', IncidentController.index);
 routes.post('/incidents', IncidentController.create);

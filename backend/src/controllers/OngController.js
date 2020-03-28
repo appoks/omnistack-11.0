@@ -24,6 +24,20 @@ module.exports = {
         });
 
         return response.json({ id });
-    }
+    },
+
+    async delete(request, response) {
+        const { id } = request.params;
+
+        const ong = await connection('ongs').where('id', id).select('name').first();
+
+
+        if (!ong) {
+            return response.status(401).json({ error: 'Error while performing deletion' });
+        }
+
+        await connection('ongs').where('id', id).delete();
+        return response.status(204);
+    },
 
 }
