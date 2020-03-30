@@ -28,8 +28,9 @@ Este projeto é desenvolvido do começo ao fim, com aplicação BackEnd - que di
 
 --
 
+##### TODO:
 
-
-
-
-
+- Implementar validações;
+- Implementar testes unitários etc;
+- Aprender a configurar eslint+prettier (vue-cli sempre faz isso por mim);
+- Implementar login com JWT?;
